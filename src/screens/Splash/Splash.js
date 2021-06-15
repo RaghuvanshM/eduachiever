@@ -1,11 +1,34 @@
-import React, { Component } from "react";
-import { Text } from 'react-native';
+import React, {Component} from 'react';
+import {Text, View, Image, ImageBackground, Dimensions} from 'react-native';
+import styles from './style';
+import images from '../../utils/Images';
 export default class Splash extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      setinterval: '',
+    };
+  }
+  navigateTonext = () => {};
+  componentDidMount() {
+   setTimeout(() => {
+      this.props.navigation.navigate('signupScreen');
+    }, 2000);
 
+  }
   render() {
-
     return (
-      <Text onPress={()=>this.props.navigation.navigate('authStack')}>Splash Screen</Text>
+      // <View>
+      //   {/* <Text onPress={() => this.props.navigation.navigate('authStack')}>Splash Screen</Text> */}
+      //   <Image
+      //    source={images.splash}
+      //    style={{height:400,width:500}}
+      //   />
+      // </View>
+      <ImageBackground
+        source={images.splash}
+        resizeMode="cover"
+        style={{height: '100%', width: '100%'}}></ImageBackground>
     );
   }
 }
