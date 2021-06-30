@@ -14,6 +14,10 @@ const AllImages = {
     choosecoursebg:require('../assets/images/chooseboardbg.png'),
     mortarbord:require('../assets/images/mortarboard.png'),
     magnifying:require('../assets/images/magnifying-glass.png'),
+    stripe:require('../assets/images/stripe.png'),
+    boardbg:require('../assets/images/choosecbg.png'),
+    checkmark:require('../assets/images/checkmark.png'),
+    questionmark:require('../assets/images/ask.png')
     
 }
 export default AllImages;

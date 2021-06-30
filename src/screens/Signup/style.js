@@ -3,12 +3,12 @@ import Colors from '../../utils/Colors';
 
 const style = StyleSheet.create({
   imagewithtext: {
-    elevation: 4,
     width: '80%',
     //backgroundColor: 'red',
-    aspectRatio: 3,
+     aspectRatio:3,
+    elevation:5,
     alignSelf: 'center',
-    borderRadius: 15,
+    borderRadius:5,
     marginTop: '5%',
   },
   pimage: {
@@ -30,6 +30,7 @@ const style = StyleSheet.create({
     // alignSelf: 'center',
     marginTop: '2%',
     marginLeft: '10%',
+    color:'#000000'
   },
   logintext: {
     fontSize: 20,

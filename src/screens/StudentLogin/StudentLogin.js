@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 import images from '../../utils/Images';
 import Colors from '../../utils/Colors';
+import styles from './style';
+import Button from '../../controls/Button/Button';
 
 export default class StudentLogin extends Component {
   render() {
@@ -21,7 +23,7 @@ export default class StudentLogin extends Component {
         resizeMode="stretch"
         style={{height: '100%'}}>
         <View style={{flexGrow: 1, justifyContent: 'center'}}>
-          <Text style={styles.label}>PARENT LOGIN </Text>
+          <Text style={styles.label}>STUDENT LOGIN </Text>
 
           <View style={{...styles.textboxwraper}}>
             <View style={styles.iconwraper}>
@@ -37,16 +39,21 @@ export default class StudentLogin extends Component {
                 keyboardType={'phone-pad'}
                 placeholder={'Phone Number'}
                 style={styles.textbox}
-                // placeholderTextColor={Colors.themeColor1 + '70'}
+                placeholderTextColor={Colors.placeholdercolor}
               />
             </View>
           </View>
-          <TouchableOpacity style={styles.buttonwraper}>
-            <Text style={styles.buttontext}>LOGIN</Text>
-          </TouchableOpacity>
+          <Button
+            title={'LOGIN'}
+            style={{width: '80%', marginTop: '7%'}}
+            textStyle={styles.buttontext}
+          />
           <View style={styles.bottomText}>
             <Text style={{fontSize: 18}}>New User ?</Text>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                this.props.navigation.navigate('studentSignupScreen');
+              }}>
               <Text style={{fontSize: 18, color: Colors.themeColor1}}>
                 Sign up
               </Text>
@@ -57,64 +64,3 @@ export default class StudentLogin extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  label: {
-    fontSize: 20,
-    color: Colors.themeColor1,
-    alignSelf: 'center',
-    fontWeight: 'bold',
-  },
-  textbox: {
-    fontSize: 16,
-    paddingVertical: 0,
-    margin: 0,
-  },
-  textboxwraper: {
-    borderWidth: 1,
-    borderColor: '#b5b3b3',
-    borderRadius: 100,
-    // paddingVertical: 13,
-    //paddingHorizontal: 20,
-    flexDirection: 'row',
-    width: '80%',
-    marginTop: '4%',
-    alignSelf: 'center',
-  },
-  iconwraper: {
-    backgroundColor: Colors.themeColor1,
-    borderTopLeftRadius: 50,
-    borderBottomLeftRadius: 50,
-    alignSelf: 'center',
-  },
-  iconimage: {
-    marginHorizontal: 10,
-    height: 25,
-    width: 25,
-    marginVertical: 10,
-    justifyContent: 'center',
-    alignSelf: 'center',
-  },
-  buttonwraper: {
-    backgroundColor: Colors.themeColor1,
-    width: '80%',
-    alignSelf: 'center',
-    justifyContent: 'center',
-    borderRadius: 100,
-    marginTop: '5%',
-  },
-  buttontext: {
-    fontSize: 20,
-    color: 'white',
-    alignSelf: 'center',
-    fontWeight: 'bold',
-    paddingVertical: 10,
-    justifyContent: 'center',
-  },
-  bottomText: {
-    flexDirection: 'row',
-    alignSelf: 'center',
-    justifyContent: 'center',
-    marginTop: '20%',
-  },
-});

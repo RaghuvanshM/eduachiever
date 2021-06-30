@@ -6,7 +6,7 @@ export default StyleSheet.create({
       backgroundColor: Colors.themeColor1,
       paddingHorizontal: 30,
       alignSelf: 'center',
-      paddingVertical: 17,
+      paddingVertical: 12,
       borderRadius: 25,
       shadowColor:'rgba(0,0,0,0.9)',
       shadowOffset:{width:0,height:0},

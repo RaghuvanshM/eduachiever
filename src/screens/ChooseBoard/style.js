@@ -40,12 +40,12 @@ const style = StyleSheet.create({
     paddingVertical: 0,
     borderWidth: 3,
   },
-  // titletext:{
-  //   fontSize:30,
-  //   color:Colors.themeColor1,
-  //   marginTop:StatusBar.currentHeight
-  
-  // },
+  toptitletext:{
+    fontSize:30,
+    color:Colors.themeColor1,
+    // borderBottomWidth:5,
+    // borderBottomColor:Colors.themeColor1
+  },
   //   searchContainer: {
   //   flex: 1,
   //   justifyContent: 'center',
@@ -79,6 +79,10 @@ const style = StyleSheet.create({
     fontSize: 15,
     paddingVertical:0
   },
+  magnifier:{
+    height:20,
+    width:20
+  }
 });
 
 export default style;

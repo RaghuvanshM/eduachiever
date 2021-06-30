@@ -3,7 +3,9 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './src/screens/ChooseBoard/Chooseboard';
+ //import App from './src/App';
+ import App from './src/screens/LinkAccount/LinkAccount';
+
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);

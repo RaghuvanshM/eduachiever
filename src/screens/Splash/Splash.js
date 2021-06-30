@@ -12,9 +12,8 @@ export default class Splash extends Component {
   navigateTonext = () => {};
   componentDidMount() {
    setTimeout(() => {
-      this.props.navigation.navigate('signupScreen');
+      this.props.navigation.navigate('authStack');
     }, 2000);
-
   }
   render() {
     return (
@@ -28,7 +27,7 @@ export default class Splash extends Component {
       <ImageBackground
         source={images.splash}
         resizeMode="cover"
-        style={{height: '100%', width: '100%'}}></ImageBackground>
+        style={{width: '100%', flex:1}}></ImageBackground>
     );
   }
 }

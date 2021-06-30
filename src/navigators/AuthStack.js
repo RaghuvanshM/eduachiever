@@ -13,7 +13,6 @@ import SplashScreen from '../screens/Splash/Splash'
 const Stack = createStackNavigator();
 function authStack() {
     return (
-        <NavigationContainer>
         <Stack.Navigator initialRouteName="signupScreen" headerMode="screen">
             <Stack.Screen name="signupScreen" component={Signup} options={{headerShown:false}} />
             <Stack.Screen name="studentSignupScreen" component={StudentSignup} options={{headerShown:false}} />
@@ -24,7 +23,7 @@ function authStack() {
             <Stack.Screen name="parentParentScreen" component={ParentLogin} options={{headerShown:false}} />
             <Stack.Screen name="splashscreen" component={SplashScreen} options={{headerShown:false}} />
         </Stack.Navigator>
-        </NavigationContainer>
+      
     )
 }
 

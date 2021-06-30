@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   ImageBackground,
   Image,
@@ -16,17 +16,18 @@ export default class Splash extends Component {
       <ImageBackground
         source={images.studentsignup}
         resizeMode="stretch"
-        style={{ height: '100%' }}>
-        <View style={{ flex: 1, justifyContent: 'center' }}>
+        style={{flex: 1}}>
+        <View style={{flex: 1, justifyContent: 'center'}}>
           <Text style={styles.titletext}>SIGNUP</Text>
-          <TouchableOpacity 
-          style={styles.imagewithtext}
-          onPress={()=>{this.props.navigation.navigate('studentSignupScreen')}}
-          >
+          <TouchableOpacity
+            style={styles.imagewithtext}
+            onPress={() => {
+              this.props.navigation.navigate('studentSignupScreen');
+            }}>
             <ImageBackground
-              style={{ height: '100%' }}
+              style={{flex: 1}}
               source={images.signupbg}
-              resizeMode='cover'>
+              resizeMode="cover">
               <View
                 style={{
                   flexDirection: 'row',
@@ -38,11 +39,15 @@ export default class Splash extends Component {
               </View>
             </ImageBackground>
           </TouchableOpacity>
-          <View style={styles.imagewithtext}>
+          <TouchableOpacity
+            style={styles.imagewithtext}
+            onPress={() => {
+              this.props.navigation.navigate('parentSignupScreen');
+            }}>
             <ImageBackground
-              style={{ height: '100%' }}
+              style={{flex: 1}}
               source={images.signupbg}
-              resizeMode="stretch">
+              resizeMode="cover">
               <View
                 style={{
                   flexDirection: 'row',
@@ -53,8 +58,8 @@ export default class Splash extends Component {
                 <Text style={styles.signuptext}>PARENT</Text>
               </View>
             </ImageBackground>
-          </View>
-          <View style={{ flexDirection: 'row' }}>
+          </TouchableOpacity>
+          <View style={{flexDirection: 'row'}}>
             <Text style={styles.bottomtext}>Alredy a Member ? </Text>
             <Text style={styles.logintext}>Login</Text>
           </View>
